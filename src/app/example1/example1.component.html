@@ -1,0 +1,32 @@
+<article class="flex">
+  <h2>Приклад 1</h2>
+  <section class="flex flex-row">
+    <div class="flex">
+      <form class="flex box">
+        <label class="flex">
+          ПІБ
+          <input type="text" value="Іванов І.І." #lastname />
+        </label>
+        <label class="flex">
+          Вік
+          <input type="number" min="0" max="100" value="10" #age />
+        </label>
+        <label class="flex">
+          Зарплатня
+          <input type="number" min="0" max="100000000" value="0" #salary />
+        </label>
+      </form>
+      <button
+        class="button"
+        (click)="initPerson(lastname.value, age.value, salary.value)"
+      >
+        Створити
+      </button>
+    </div>
+    <div class="flex box">
+      <h4>Прізвище={{ person.LastName }}</h4>
+      <h4>Вік={{ person.Age }}</h4>
+      <h4>Статус={{ person.Status }}</h4>
+    </div>
+  </section>
+</article>

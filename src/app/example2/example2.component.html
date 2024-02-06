@@ -1,0 +1,33 @@
+<article class="flex">
+  <h2>Приклад 2</h2>
+  <section class="flex flex-row">
+    <div class="flex">
+      <form class="flex box">
+        <label class="flex">
+          W
+          <input type="number" min="1" max="100" value="10" #w />
+        </label>
+        <label class="flex">
+          H
+          <input type="number" min="1" max="100" value="1" #h />
+        </label>
+        <label class="flex">
+          Тип трикутника
+          <input type="text" value="Прямокутний" #type />
+        </label>
+      </form>
+      <button
+        class="button"
+        (click)="initFigures(w.value, h.value, type.value)"
+      >
+        Створити
+      </button>
+    </div>
+    <div class="flex box">
+      <h3>Фігура</h3>
+      <h4>{{ fig }}</h4>
+      <h3>Трикутник</h3>
+      <h4>{{ tr }}</h4>
+    </div>
+  </section>
+</article>
